@@ -1,0 +1,12 @@
+concept,name,concept_type
+year,Year,time
+name,Name,string
+disaster,disaster,entity_domain
+country,country,entity_domain
+occurrence,occurrence,measure
+total_deaths,Total deaths,measure
+affected,Affected,measure
+injured,Injured,measure
+homeless,Homeless,measure
+total_affected,Total affected,measure
+total_damage,Total damage,measure

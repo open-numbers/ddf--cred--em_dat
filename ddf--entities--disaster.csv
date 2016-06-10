@@ -1,0 +1,18 @@
+disaster,name
+drought,Drought
+epidemic,Epidemic
+flood,Flood
+storm,Storm
+volcanic_activity,Volcanic activity
+earthquake,Earthquake
+industrial_accident,Industrial accident
+miscellaneous_accident,Miscellaneous accident
+mass_movement_dry,Mass movement (dry)
+transport_accident,Transport accident
+landslide,Landslide
+wildfire,Wildfire
+insect_infestation,Insect infestation
+complex_disasters,Complex Disasters
+extreme_temperature,Extreme temperature 
+impact,Impact
+animal_accident,Animal accident
