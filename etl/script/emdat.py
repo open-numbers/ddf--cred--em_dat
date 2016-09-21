@@ -55,7 +55,8 @@ def extract_datapoints(data):
     for i, col in dps.items():
         df = col.reset_index()
         df = df.dropna()
-        df[i] = df[i].map(int)
+        # data are number of occurrence, all integers
+        df[i] = df[i].astype(int)
         yield i, df
 
 
