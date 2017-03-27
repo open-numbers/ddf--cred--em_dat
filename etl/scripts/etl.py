@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 from ddf_utils.str import to_concept_id
-from ddf_utils.index import create_index_file
+from ddf_utils.index import get_datapackage
 
 # configuration of file path
 source = '../source/Data.csv'
@@ -84,7 +84,7 @@ if __name__ == '__main__':
         path = os.path.join(out_dir, 'ddf--datapoints--{}--by--country--disaster--year.csv'.format(i))
         df.to_csv(path, index=False)
 
-    print('creating index files...')
-    create_index_file(out_dir)
+    print('creating datapackage.json file...')
+    get_datapackage(out_dir, to_disk=True, use_existing=True)
 
     print('Done.')
