@@ -3,10 +3,15 @@
     "language": {
         "id": "en"
     },
+    "title": "ddf--cred--em_dat",
+    "description": "",
+    "author": "",
+    "license": "",
+    "created": "2019-09-17T07:26:35.217693+00:00",
     "resources": [
         {
-            "path": "ddf--concepts.csv",
             "name": "ddf--concepts",
+            "path": "ddf--concepts.csv",
             "schema": {
                 "fields": [
                     {
@@ -23,8 +28,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--affected--by--country--disaster--year.csv",
             "name": "ddf--datapoints--affected--by--country--disaster--year",
+            "path": "ddf--datapoints--affected--by--country--disaster--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -48,8 +53,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--homeless--by--country--disaster--year.csv",
             "name": "ddf--datapoints--homeless--by--country--disaster--year",
+            "path": "ddf--datapoints--homeless--by--country--disaster--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -73,8 +78,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--injured--by--country--disaster--year.csv",
             "name": "ddf--datapoints--injured--by--country--disaster--year",
+            "path": "ddf--datapoints--injured--by--country--disaster--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -98,8 +103,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--occurrence--by--country--disaster--year.csv",
             "name": "ddf--datapoints--occurrence--by--country--disaster--year",
+            "path": "ddf--datapoints--occurrence--by--country--disaster--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -123,8 +128,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--total_affected--by--country--disaster--year.csv",
             "name": "ddf--datapoints--total_affected--by--country--disaster--year",
+            "path": "ddf--datapoints--total_affected--by--country--disaster--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -148,8 +153,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--total_damage--by--country--disaster--year.csv",
             "name": "ddf--datapoints--total_damage--by--country--disaster--year",
+            "path": "ddf--datapoints--total_damage--by--country--disaster--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -173,8 +178,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--total_deaths--by--country--disaster--year.csv",
             "name": "ddf--datapoints--total_deaths--by--country--disaster--year",
+            "path": "ddf--datapoints--total_deaths--by--country--disaster--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -198,8 +203,8 @@
             }
         },
         {
-            "path": "ddf--entities--country.csv",
             "name": "ddf--entities--country",
+            "path": "ddf--entities--country.csv",
             "schema": {
                 "fields": [
                     {
@@ -213,8 +218,8 @@
             }
         },
         {
-            "path": "ddf--entities--disaster.csv",
             "name": "ddf--entities--disaster",
+            "path": "ddf--entities--disaster.csv",
             "schema": {
                 "fields": [
                     {
@@ -227,5 +232,127 @@
                 "primaryKey": "disaster"
             }
         }
-    ]
+    ],
+    "ddfSchema": {
+        "concepts": [
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "concept_type",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            }
+        ],
+        "entities": [
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "disaster"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--disaster"
+                ]
+            }
+        ],
+        "datapoints": [
+            {
+                "primaryKey": [
+                    "country",
+                    "disaster",
+                    "year"
+                ],
+                "value": "affected",
+                "resources": [
+                    "ddf--datapoints--affected--by--country--disaster--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "disaster",
+                    "year"
+                ],
+                "value": "homeless",
+                "resources": [
+                    "ddf--datapoints--homeless--by--country--disaster--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "disaster",
+                    "year"
+                ],
+                "value": "injured",
+                "resources": [
+                    "ddf--datapoints--injured--by--country--disaster--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "disaster",
+                    "year"
+                ],
+                "value": "occurrence",
+                "resources": [
+                    "ddf--datapoints--occurrence--by--country--disaster--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "disaster",
+                    "year"
+                ],
+                "value": "total_affected",
+                "resources": [
+                    "ddf--datapoints--total_affected--by--country--disaster--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "disaster",
+                    "year"
+                ],
+                "value": "total_damage",
+                "resources": [
+                    "ddf--datapoints--total_damage--by--country--disaster--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "disaster",
+                    "year"
+                ],
+                "value": "total_deaths",
+                "resources": [
+                    "ddf--datapoints--total_deaths--by--country--disaster--year"
+                ]
+            }
+        ],
+        "synonyms": []
+    }
 }
