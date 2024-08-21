@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2019-09-17T07:26:35.217693+00:00",
+    "created": "2024-08-21T02:47:05.818219+00:00",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -24,7 +24,9 @@
                         "name": "concept_type"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
             }
         },
         {
@@ -214,7 +216,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "country"
+                "primaryKey": [
+                    "country"
+                ]
             }
         },
         {
@@ -229,7 +233,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "disaster"
+                "primaryKey": [
+                    "disaster"
+                ]
             }
         }
     ],
